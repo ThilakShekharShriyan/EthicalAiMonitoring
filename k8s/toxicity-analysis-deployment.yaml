@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: toxicity-analysis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: toxicity-analysis
+  template:
+    metadata:
+      labels:
+        app: toxicity-analysis
+    spec:
+      containers:
+      - name: toxicity-analysis
+        image: yourdockerhub/toxicity-analysis:latest
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - configMapRef:
+            name: app-config
+        - secretRef:
+            name: app-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: toxicity-analysis-service
+spec:
+  selector:
+    app: toxicity-analysis
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+  type: ClusterIP

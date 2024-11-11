@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bias-detection
+  name: reporting
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bias-detection
+      app: reporting
   template:
     metadata:
       labels:
-        app: bias-detection
+        app: reporting
     spec:
       containers:
-      - name: bias-detection
-        image: yourdockerhub/bias-detection:latest
+      - name: reporting
+        image: yourdockerhub/reporting:latest
         ports:
         - containerPort: 5000
         envFrom:
@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bias-detection-service
+  name: reporting-service
 spec:
   selector:
-    app: bias-detection
+    app: reporting
   ports:
   - protocol: TCP
     port: 80
