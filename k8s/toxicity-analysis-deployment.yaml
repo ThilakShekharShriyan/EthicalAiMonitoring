@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: toxicity-analysis
-        image: yourdockerhub/toxicity-analysis:latest
+        image: toxicity-analysis:latest
         ports:
         - containerPort: 5000
         envFrom:
@@ -33,5 +33,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 5000
+    targetPort: 5656
   type: ClusterIP

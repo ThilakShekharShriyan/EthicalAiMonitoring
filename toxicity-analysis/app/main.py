@@ -19,4 +19,4 @@ def analyze_toxicity():
     return jsonify({"text": text, "toxicity_detected": is_toxic})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5656)

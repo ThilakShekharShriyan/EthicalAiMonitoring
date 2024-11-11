@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: bias-detection
-        image: yourdockerhub/bias-detection:latest
+        image: bias-detection:latest
         ports:
         - containerPort: 5000
         envFrom:
@@ -33,5 +33,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 5000
+    targetPort: 5656
   type: ClusterIP
