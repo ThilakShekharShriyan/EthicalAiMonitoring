@@ -47,3 +47,18 @@ What all is included in the projects
         - api-gateway : Manages routing between services.
 
 
+# Todo
+- Read about Ethical AI monitoring and exisiting solutions
+- Come up with modules and services to add
+- System design the layout
+- Program design and  
+
+# Janavi
+- Detecting Hallucinations 
+- Setup ollama Service
+
+
+# Thilak
+- Detecting Toxicity
+- PVC Database.
+
