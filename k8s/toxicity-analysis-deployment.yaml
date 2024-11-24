@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: toxicity-analysis
-        image: docker.io/library/ethicalaimonitoring-toxicity_analysis:latest
+        image: ethicalaimonitoring-toxicity_analysis:latest
         ports:
         - containerPort: 5000
         envFrom:
