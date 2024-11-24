@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: reporting
-        image: reporting:latest
+        image: docker.io/library/ethicalaimonitoring-reporting:latest
         ports:
         - containerPort: 5000
         envFrom:

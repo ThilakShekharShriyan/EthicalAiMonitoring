@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: bias-detection
-        image: bias-detection:latest
+        image: docker.io/library/ethicalaimonitoring-bias_detection:latest
         ports:
         - containerPort: 5000
         envFrom:

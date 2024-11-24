@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: api-gateway:latest
+        image: docker.io/library/ethicalaimonitoring-api_gateway:latest
         ports:
         - containerPort: 80
         envFrom:
