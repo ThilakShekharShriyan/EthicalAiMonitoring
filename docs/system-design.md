@@ -1,4 +1,6 @@
 
+System Architecture:
+https://drive.google.com/file/d/1cAyFBZg1d8Tpt-N67BB0A9QwKvKQxpcY/view?usp=sharing
 
 
 ### Input 
