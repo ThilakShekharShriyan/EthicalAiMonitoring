@@ -4,6 +4,7 @@
 # curl -X POST http://localhost:5000/bias-detection -d '{"text": "Sample text with bias"}' -H "Content-Type: application/json"
 
 from flask import Flask, request, jsonify
+import logging
 
 app = Flask(__name__)
 
@@ -12,8 +13,15 @@ def detect_bias():
     data = request.get_json()
     text = data.get("text", "")
     # Mock processing: Let's assume any text with "bias" has bias
-    has_bias = "bias" in text.lower()
+    # has_bias = "bias" in text.lower()
+    logger.info("Basic ")
+    logger.error("")
+
+
     return jsonify({"text": text, "bias_detected": has_bias})
+
+
+@app.route("/", )
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5656)
